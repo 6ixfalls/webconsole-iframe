@@ -16,6 +16,7 @@ html, body {
 	height: 100%;
 	font-family: 'Cascadia Code';
 	font-weight: 300;
+	background-color: transparent;
 }
 
 #serverContainer {
