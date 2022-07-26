@@ -67,7 +67,7 @@ function onWebSocketsMessage(message) {
 			}
 
 			//Read log file if enabled
-			if (true) {
+			if (false) {
 				if (connectionManager.activeConnection.isLogged === false) {
 					connectionManager.activeConnection.isLogged = true;
 					connectionManager.askForLogs();
