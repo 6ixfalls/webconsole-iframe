@@ -77,6 +77,8 @@ function onWebSocketsMessage(message) {
 			writeToWebConsole(message.message);
 			break;
 		case 401:
+			if (autoPasswordCompleted) break;
+			autoPasswordCompleted = true;
 			connectionManager.sendPassword(params.get("p"));
 			break;
 		default:
