@@ -1,0 +1,30 @@
+@font-face {
+	font-family: 'Cascadia Code';
+	src: url("/CaaascadiaCode.ttf");
+}
+
+.flat-progressbar{
+	height: 10px;
+}
+
+.console{
+	height: calc(100vh - 38px - 12px);
+}
+
+html, body {
+	margin: 0;
+	height: 100%;
+	font-family: 'Cascadia Code';
+	font-weight: 300;
+}
+
+#serverContainer {
+	width: 100vw !important;
+	margin: 0 !important;
+}
+
+.form-control::-webkit-input-placeholder { opacity: 0.4; }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { opacity: 0.4; }  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { opacity: 0.4; }  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { opacity: 0.4; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { opacity: 0.4; }  /* Microsoft Edge */
