@@ -67,10 +67,13 @@ function onWebSocketsMessage(message) {
 			}
 
 			//Read log file if enabled
-			if (connectionManager.activeConnection.isLogged === false) {
-				connectionManager.activeConnection.isLogged = true;
-				connectionManager.askForLogs();
+			if (true) {
+				if (connectionManager.activeConnection.isLogged === false) {
+					connectionManager.activeConnection.isLogged = true;
+					connectionManager.askForLogs();
+				}
 			}
+			
 			break;
 		case 400:
 			//Unknown Command
@@ -83,14 +86,6 @@ function onWebSocketsMessage(message) {
 			break;
 		default:
 			console.log('Unknown server response:');
-	}
-	console.log(message);
-
-	//Add interval for Players, CPU and RAM info, if not set
-	if (statusCommandsInterval === -1 && message.status !== 401) {
-		statusCommandsInterval = setInterval(function () {
-			connectionManager.askForInfo();
-		}, 2500);
 	}
 }
 
